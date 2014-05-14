@@ -56,3 +56,9 @@ docs/_build/
 *.sublime-project
 *.sublime-workspace
 
+#visual studio solution file
+*.suo
+*.sln
+*.vssscc
+
+.idea/
