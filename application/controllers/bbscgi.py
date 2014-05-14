@@ -8,7 +8,5 @@ import libs.bottle
 class BbsCgi(controllerbase.ControllerBase):
     """docstring for BbsCgi"""
     def __init__(self):
-        self.basedobject = controllerbase.ControllerBase.__init__(self, "bbs.cgi")
-
-    basedobject = None
+        super(BbsCgi, self).__init__("bbs.cgi")
 

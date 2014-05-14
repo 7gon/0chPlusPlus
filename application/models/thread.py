@@ -4,8 +4,9 @@
 
 class Thread:
     """docstring for Thread"""
-    def __init__(self, arg):
-        return self
+    def __init__(self, key):
+        self.threadKey = key
+        self.readsetting()
 
     def threadname():
         doc = "The threadName property."
@@ -28,3 +29,26 @@ class Thread:
             self._threadKey = value
         return locals()
     threadKey = property(**threadkey())
+
+    def threadsettinghash_get(self):
+        return self.threadsettinghash
+
+    def threadsettinghash_set(self, value):
+        self.threadsettinghash = value
+
+    threadsettinghash = property(threadsettinghash_get, threadsettinghash_set)
+
+    def getthreadsettinghashvalue(self, key):
+        return self.threadsettinghash[key]
+
+    def addthreadsettinghashvalue(self, key, value):
+        self.threadsettinghash[key] = value
+
+    def updatethreadsettinghashset(self, key, value):
+        self.threadsettinghash.update({key, value})
+
+    def removethreadsettinghashkey(self, key):
+        self.threadsettinghash.pop(key)
+
+    def readsetting(self):
+        pass

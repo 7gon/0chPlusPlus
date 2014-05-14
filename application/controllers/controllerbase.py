@@ -11,18 +11,18 @@ import Cookie
 
 class ControllerBase(object):
     """docstring for ControllerBase"""
-    def __init__(self, title):
+    def __init__(self, name):
         super(ControllerBase, self).__init__()
-        self.title = title
+        self.name = name
         return self
     
-    def title_get(self):
+    def name_get(self):
         return self._title
 
-    def title_set(self, value):
+    def name_set(self, value):
         self._title = value
 
-    title = property(title_get, title_set)
+    name = property(name_get, name_set)
 
     def rawpostdata():
         doc = "The rawPostData property."
