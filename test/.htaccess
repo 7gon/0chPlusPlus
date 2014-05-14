@@ -1,0 +1,16 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*)\.cgi$ $1.py [L]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} ^test/bbs.cgi
+RewriteRule test/bbs\.cgi$ applcation/controllers/bbscgi.py
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} ^test/read.cgi
+RewriteRule test/read\.cgi$ applcation/controllers/read.py
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} ^test/r.cgi
+RewriteRule test/r\.cgi$ applcation/controllers/mobileread.py

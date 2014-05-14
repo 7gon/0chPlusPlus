@@ -53,3 +53,8 @@ class ControllerBase(object):
             return os.environ['HTTP_COOKIE']
         return locals()
     rawCookie = property(**rawcookie())
+
+if __name__ == '__main__':
+    import sys
+    sys.stderr.write('Error: Don\'t call this file directly.')
+    exit(-1)
