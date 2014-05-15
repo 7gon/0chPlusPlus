@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import controllers.controllerbase
+import libs.cherrypy.lib.sessions
 
 
 class AdminCgi(controllers.controllerbase.ControllerBase):
