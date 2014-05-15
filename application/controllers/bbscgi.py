@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import controllerbase
-import libs.bottle
 
 
 class BbsCgi(controllerbase.ControllerBase):
